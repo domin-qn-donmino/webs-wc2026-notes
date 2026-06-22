@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>世界杯 · 2026 信息页</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f9fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #1e293b;
+      line-height: 1.65;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 680px;
+      width: 100%;
+    }
+
+    /* -------------------- hero 区域 -------------------- */
+    .hero {
+      margin-bottom: 3rem;
+    }
+
+    .hero-title {
+      font-size: 2.6rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+      color: #0f172a;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: #475569;
+      border-left: 3px solid #3b82f6;
+      padding-left: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    /* -------------------- 信息卡片网格 -------------------- */
+    .card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+      margin: 2.5rem 0;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.5rem 1.75rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+      border: 1px solid #eef2f6;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .card p {
+      color: #334155;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .card .meta {
+      color: #64748b;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      border-top: 1px dashed #e2e8f0;
+      padding-top: 0.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #eef2ff;
+      color: #3b82f6;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 0.15rem 0.6rem;
+      border-radius: 20px;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+    }
+
+    /* -------------------- 自然链接段落 -------------------- */
+    .link-section {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.5rem 1.75rem;
+      border: 1px solid #eef2f6;
+      margin: 2rem 0;
+    }
+
+    .link-section p {
+      font-size: 0.95rem;
+      color: #1e293b;
+      margin-bottom: 0.6rem;
+    }
+
+    .link-section a {
+      color: #3b82f6;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1.5px solid transparent;
+      transition: border-color 0.15s ease;
+    }
+
+    .link-section a:hover {
+      border-bottom-color: #3b82f6;
+    }
+
+    /* -------------------- 适合人群 / 标签列表 -------------------- */
+    .audience-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.75rem;
+      margin-top: 0.75rem;
+      list-style: none;
+    }
+
+    .audience-list li {
+      background: #f1f5f9;
+      border-radius: 24px;
+      padding: 0.2rem 1rem;
+      font-size: 0.85rem;
+      color: #1e293b;
+    }
+
+    /* -------------------- 底部 -------------------- */
+    .faq-summary {
+      margin: 2.5rem 0 1.5rem;
+      padding: 0 0.25rem;
+    }
+
+    .faq-item {
+      padding: 0.8rem 0;
+      border-bottom: 1px solid #e9edf2;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: #0f172a;
+      margin-bottom: 0.15rem;
+    }
+
+    .faq-a {
+      font-size: 0.9rem;
+      color: #475569;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 2rem 0 1rem;
+    }
+
+    .footnote {
+      font-size: 0.8rem;
+      color: #94a3b8;
+      text-align: center;
+      margin: 2rem 0 0.5rem;
+    }
+
+    /* -------------------- 响应式 -------------------- */
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .card {
+        padding: 1.25rem;
+      }
+
+      .link-section {
+        padding: 1.25rem;
+      }
+
+      .container {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- hero -->
+    <header class="hero">
+      <h1 class="hero-title">世界杯 · 2026</h1>
+      <div class="hero-sub">信息卡片式 · 稳定入口与页面说明</div>
+      <p style="margin-top:1.2rem; color:#475569; font-size:0.95rem;">
+        围绕赛事资讯、内容聚合与访问路径，提供结构清晰的参考页。
+        以下卡片分别对应主要用途、场景与受众，信息密度适中，便于快速浏览。
+      </p>
+    </header>
+
+    <!-- 信息卡片：用途 / 场景 / 功能 -->
+    <div class="card-grid">
+      <div class="card">
+        <h3>📋 用途卡片 · 聚合入口</h3>
+        <p>集中展示赛程、分组、球队数据与历史记录。页面以静态信息卡片为主，降低跳转成本，适合作为日常查询的起点。</p>
+        <p>每项卡片包含简明摘要与状态标识（待更新 / 已确认），结构统一。</p>
+        <div class="meta">更新频率：每日 · 数据源校验后发布</div>
+      </div>
+
+      <div class="card">
+        <h3>🎯 场景卡片 · 多种使用方式</h3>
+        <p>桌面端与移动端均可正常阅读；窄屏下卡片自动撑满，保留全部文字信息。无需登录即可浏览所有公开内容。</p>
+        <p>主要场景：赛前预览、赛后回顾、球队横向对比、赛程备忘。</p>
+        <div class="meta">离线缓存支持 · 页面轻量</div>
+      </div>
+
+      <div class="card">
+        <h3>👥 适合人群 <span class="badge">受众参考</span></h3>
+        <ul class="audience-list">
+          <li>赛事关注者</li>
+          <li>数据爱好者</li>
+          <li>媒体撰稿人</li>
+          <li>体育运营</li>
+          <li>新球迷</li>
+        </ul>
+        <p style="margin-top:0.8rem; color:#334155;">无需专业背景，信息以客观呈现为主，减少主观评价。</p>
+      </div>
+    </div>
+
+    <!-- 自然链接段落（核心 a 标签所在） -->
+    <div class="link-section">
+      <p>
+        如果你正在寻找关于2026年赛事的一手信息集合，<a href="https://webs-wc2026.com">世界杯</a>页面提供了赛事阶段、参赛队伍及比赛场馆的基础资料。
+        页面内容经过结构化整理，方便快速定位特定轮次或小组。
+      </p>
+      <p style="margin-top:0.6rem;">
+        对于需要反复查阅赛历的用户，该页面也保留了完整的日期对照与场地标注。所有链接均指向静态内容，不包含自动播放或弹窗。
+      </p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-summary">
+      <h2 style="font-size:1rem; font-weight:600; color:#0f172a; margin-bottom:0.75rem;">常见问题摘要</h2>
+      <div class="faq-item">
+        <div class="faq-q">页面数据多久更新一次？</div>
+        <div class="faq-a">通常随官方信息发布后当日或次日同步，极端情况可能延迟。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">是否需要注册才能浏览全部内容？</div>
+        <div class="faq-a">不需要。所有卡片与列表均为公开内容，无登录门槛。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">移动端阅读体验如何？</div>
+        <div class="faq-a">卡片采用弹性布局，文本字号在窄屏下保持可读，无横向滚动。</div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="footnote">
+      信息卡片式 · 稳定入口<br />
+      页面仅作说明用途，内容参照公开赛事资料整理。
+    </div>
+  </div>
+</body>
+</html>
